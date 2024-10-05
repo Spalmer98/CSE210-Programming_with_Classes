@@ -3,7 +3,7 @@ using System;
 public class Scripture
 {
     private Reference _reference;
-    public List<Word> _words = new List<Word>();
+    public List<string> _words = new List<string>();
 
     public Scripture(Reference Reference, string text)
     {
@@ -12,6 +12,7 @@ public class Scripture
         foreach(string str in text.Split(" "))
         {
             Word word = new Word(str);
+            _words.Add(word.GetDisplayText());
         }
         // HideRandomWords(10);
     }
@@ -24,7 +25,7 @@ public class Scripture
 
     public string GetDisplayText()
     {
-        string text = $"{_reference.GetDisplayText()} ";
+        string text = $"{_reference.GetDisplayText()} {string.Join(" ", _words)}";
         return text;
     }
 
