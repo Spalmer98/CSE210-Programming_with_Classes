@@ -7,6 +7,7 @@ class Program
         string run = "null";
         do
         {
+            // Cear console
             Console.Clear();
 
             Reference r1 = new Reference("Proverbs", 3, 5, 6);

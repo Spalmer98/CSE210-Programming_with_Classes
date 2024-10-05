@@ -8,7 +8,7 @@ public class Word
     public Word(string text)
     {
         _text = text;
-        
+        // need to figure out how to remove sections of words
     }
 
     private void Hide()

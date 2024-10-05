@@ -14,7 +14,7 @@ public class Scripture
             Word word = new Word(str);
             _words.Add(word.GetDisplayText());
         }
-        // HideRandomWords(10);
+        // HideRandomWords(10)
     }
 
     public void HideRandomWords(int numberToHide)
