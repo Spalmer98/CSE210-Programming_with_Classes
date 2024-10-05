@@ -3,11 +3,7 @@ using System;
 public class Scripture
 {
     private Reference _reference;
-    private List<Word> _words = new List<Word>();
-
-    private List<string> _word = new List<string>();
-
-    private int _randomNumber;
+    public List<Word> _words = new List<Word>();
 
     public Scripture(Reference Reference, string text)
     {
@@ -15,22 +11,20 @@ public class Scripture
 
         foreach(string str in text.Split(" "))
         {
-            _word.Add(str);
-            // Word word = new Word(str);
-            // Console.Write(word.GetDisplayText());
+            Word word = new Word(str);
         }
-        HideRandomWords(10);
+        // HideRandomWords(10);
     }
 
     public void HideRandomWords(int numberToHide)
     {
-        Random randomGenerator = new Random();
-        _randomNumber = randomGenerator.Next(0, numberToHide);
+        // Random randomGenerator = new Random();
+        // _randomNumber = randomGenerator.Next(0, numberToHide);
     }
 
     public string GetDisplayText()
     {
-        string text = $"{_reference.GetDisplayText()} {_word[_randomNumber]}";
+        string text = $"{_reference.GetDisplayText()} ";
         return text;
     }
 
