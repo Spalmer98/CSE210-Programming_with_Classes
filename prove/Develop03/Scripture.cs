@@ -3,37 +3,38 @@ using System;
 public class Scripture
 {
     private Reference _reference;
-    public List<string> _words = new List<string>();
+    private List<Word> _words {get; set;}
 
     public Scripture(Reference Reference, string text)
     {
         _reference = Reference;
 
-        foreach(string str in text.Split(" "))
+        _words = text.Split(" ").Select(word => new Word(word)).ToList();
+    }
+
+    public void HideRandomWords(Random random)
+    {
+        if (_words.All(w => w._isHidden)) return;
+        
+        int numberToHide;
+        do
         {
-            Word word = new Word(str);
-            _words.Add(word.GetDisplayText());
+            numberToHide = random.Next(_words.Count);
+        } while (_words[numberToHide]._isHidden);
+        _words[numberToHide]._isHidden = true;
+    }
+
+    public void GetDisplayText()
+    {
+        Console.Write($"{_reference.GetDisplayText()} ");
+        foreach (var word in _words)
+        {
+            Console.Write(word._isHidden ? "____ " : word.GetDisplayText());
         }
-        // HideRandomWords(10)
+        Console.WriteLine();
     }
 
-    public void HideRandomWords(int numberToHide)
-    {
-        // Random randomGenerator = new Random();
-        // _randomNumber = randomGenerator.Next(0, numberToHide);
-    }
-
-    public string GetDisplayText()
-    {
-        string text = $"{_reference.GetDisplayText()} {string.Join(" ", _words)}";
-        return text;
-    }
-
-    public bool IsCompletelyHidden()
-    {
-        bool condition = false;
-        return condition;
-    }
+    public bool AllWordsHidden => _words.All(w => w._isHidden);
 }
 
 // string.Join(" ", _word)
