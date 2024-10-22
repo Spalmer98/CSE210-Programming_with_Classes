@@ -8,6 +8,7 @@ class Program
 
         do
         {
+            Console.Clear();
             Console.WriteLine("Menu Options:");
             Console.WriteLine("    1. Start breathing activity");
             Console.WriteLine("    2. Start reflection activity");
@@ -18,7 +19,9 @@ class Program
 
             if (option == 1)
             {
-
+                Console.Clear();
+                Breathing b1 = new Breathing("Breating Activity", "This activity will help you relax by walking you through breathing in and out slowly.\nClear your mind and focus on your breathing.");
+                b1.DisplayStartingMessage();
             }
             else if (option == 2)
             {

@@ -16,7 +16,7 @@ public class Activity
     {
         Console.WriteLine($"Welcome to {_activityName}.\n");
         Console.WriteLine(_description);
-        Console.Write("How long, in seconds, would you like for you session? ");
+        Console.Write("\nHow long, in seconds, would you like for you session? ");
         _activityDuration = Console.Read();
     }
 }
