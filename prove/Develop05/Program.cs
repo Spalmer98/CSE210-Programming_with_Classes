@@ -29,7 +29,9 @@ class Program
             }
             else if (option == 3)
             {
-
+                Console.Clear();
+                Listening l1 = new Listening("Lisening Activity", "NULL");
+                l1.DisplayStartingMessage();
             }
             else if (option == 4)
             {
