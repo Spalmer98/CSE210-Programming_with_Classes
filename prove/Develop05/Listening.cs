@@ -1,7 +1,7 @@
 public class Listening : Activity
 {
-    List<string> _prompts = new List<string>();
-    List<string> _questions = new List<string>();
+    private List<string> _prompts = new List<string>();
+    private List<string> _questions = new List<string>();
 
     public Listening(string name, string description) : base(name, description)
     {
