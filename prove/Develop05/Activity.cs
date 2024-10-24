@@ -19,4 +19,19 @@ public class Activity
         Console.Write("\nHow long, in seconds, would you like for you session? ");
         _activityDuration = Console.Read();
     }
+
+    public void DisplayEndingMessage()
+    {
+
+    }
+
+    public void ShowSpinner(int seconds)
+    {
+
+    }
+
+    public void ShowCountDown(int seconds)
+    {
+
+    }
 }
