@@ -22,7 +22,9 @@ public class Activity
 
     public void DisplayEndingMessage()
     {
-
+        Console.WriteLine("Well Done!!");
+        Thread.Sleep(1500);
+        Console.WriteLine($"You have completed {_activityDuration} seconds of the {_activityName}");
     }
 
     public void ShowSpinner(int seconds)

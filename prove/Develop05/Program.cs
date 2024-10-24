@@ -26,13 +26,13 @@ class Program
             else if (option == 2)
             {
                 Console.Clear();
-                Reflection r1 = new Reflection("Reflection Activity", "NULL");
+                Reflection r1 = new Reflection("Reflection Activity", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
                 r1.DisplayStartingMessage();
             }
             else if (option == 3)
             {
                 Console.Clear();
-                Listening l1 = new Listening("Lisening Activity", "NULL");
+                Listening l1 = new Listening("Lisening Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
                 l1.DisplayStartingMessage();
             }
             else if (option == 4)

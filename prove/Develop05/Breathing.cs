@@ -7,6 +7,8 @@ public class Breathing : Activity
 
     void Run()
     {
+        int duration = _activityDuration;
+        Console.WriteLine("Get ready...");
         
     }
 }
