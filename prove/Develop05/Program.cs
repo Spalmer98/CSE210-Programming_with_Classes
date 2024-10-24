@@ -25,7 +25,9 @@ class Program
             }
             else if (option == 2)
             {
-
+                Console.Clear();
+                Reflection r1 = new Reflection("Reflection Activity", "NULL");
+                r1.DisplayStartingMessage();
             }
             else if (option == 3)
             {
