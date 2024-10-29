@@ -48,6 +48,7 @@ public class Manager
 
             using (StreamWriter outputFile = new StreamWriter(fileName))
             {
+                outputFile.WriteLine(_score);
                 foreach (Goals goal in _goals)
                 {
                     outputFile.WriteLine(goal.GetStringRepresentation());
