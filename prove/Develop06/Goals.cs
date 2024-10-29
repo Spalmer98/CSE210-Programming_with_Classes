@@ -2,7 +2,7 @@ public abstract class Goals
 {
     public string _name;
     public string _description;
-    private string _points;
+    public string _points;
 
     protected Goals(string name, string description, string points)
     {
@@ -15,12 +15,12 @@ public abstract class Goals
 
     public bool IsComplete()
     {
-        return true;
+        return false;
     }
 
     public virtual string GetDetails()
     {
-        return "";
+        return $"{_name}, {_description}, {_points}, {IsComplete()}";
     }
 
     public abstract string GetStringRepresentation();

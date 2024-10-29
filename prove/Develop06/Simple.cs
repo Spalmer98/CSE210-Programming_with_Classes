@@ -9,7 +9,7 @@ public class Simple : Goals
 
     public override void RecordEvent()
     {   
-
+        
     }
 
     public bool IsComplete()

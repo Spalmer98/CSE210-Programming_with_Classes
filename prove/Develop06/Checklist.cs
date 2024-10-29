@@ -22,7 +22,7 @@ public class Checklist : Goals
 
     public override string GetDetails()
     {
-        return base.GetDetails();
+        return $"{_name}, {_description}, {_points}, {_bonus}, {_target}, {_amountCompleted}";
     }
 
     public override string GetStringRepresentation()

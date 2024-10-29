@@ -51,11 +51,11 @@ public class Manager
                 outputFile.WriteLine(_score);
                 foreach (Goals goal in _goals)
                 {
-                    outputFile.WriteLine(goal.GetStringRepresentation());
+                    outputFile.WriteLine($"{goal}: {goal.GetDetails()}");
                 }
-                
             }
-                    }
+            Start();
+        }
         else if (userInput == "4")
         {
             
@@ -66,7 +66,7 @@ public class Manager
         }
         else if (userInput == "6")
         {
-
+            
         }
         else
         {
