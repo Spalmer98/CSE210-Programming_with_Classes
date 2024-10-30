@@ -12,7 +12,7 @@ public class Eternal : Goals
 
     public bool IsComplete()
     {
-        return true;
+        return false;
     }
 
     public override string GetStringRepresentation()
