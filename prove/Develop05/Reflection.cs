@@ -9,7 +9,8 @@ public class Reflection : Activity
 
     public void Run()
     {
-
+        Console.WriteLine("Reflection Test");
+        Thread.Sleep(1500);
     }
 
     public string GetPrompt()

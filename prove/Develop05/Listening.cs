@@ -10,7 +10,8 @@ public class Listening : Activity
 
     public void Run()
     {
-
+        Console.WriteLine("Listening Test");
+        Thread.Sleep(1500);
     }
 
     public void GetPrompt()

@@ -25,6 +25,7 @@ public class Activity
         Console.WriteLine("Well Done!!");
         Thread.Sleep(1500);
         Console.WriteLine($"You have completed {_activityDuration} seconds of the {_activityName}");
+        Thread.Sleep(2000);
     }
 
     public void ShowSpinner(int seconds)
